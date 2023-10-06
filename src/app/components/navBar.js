@@ -7,20 +7,20 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <header>
+    <nav class="container mx-auto px-4">
       <Link 
         href="/"
         to="/"
-        className={pathname == "/" ? "active" : ""}>
+        className={pathname == "/" ? "active_nav" : ""}>
         Home
       </Link>
       <Link 
         href="/art"
         to="/art"
-        className={pathname == "/art" ? "active" : ""}>
+        className={pathname == "/art" ? "active_nav" : ""}>
         Art
       </Link>
-    </header>
+    </nav>
   )
 }
 

@@ -3,7 +3,7 @@ import LinkTreeLink from '../components/linkTreeLink'
 
 const artPage = () => {
   return (
-    <main>
+    <main class="container mx-auto px-4">
       <h1>Art Page</h1>
       <h3>New EP!</h3>
       <LinkTreeLink 

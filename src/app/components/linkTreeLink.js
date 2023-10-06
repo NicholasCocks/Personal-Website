@@ -7,7 +7,10 @@ const LinkTreeLink = ({linkname, link, preview_photo}) => {
   return (
     <div>
       <Link 
-        href/>{linkname}
+        href={link}
+        target="_blank">
+        {linkname}
+      </Link>
     </div>
 
     // TODO: Share Button Feature
