@@ -5,10 +5,13 @@ import Image from 'next/image'
 
 const LinkTreeLink = ({linkname, link, preview_photo}) => {
   return (
-    <div>
+    <div className='my-2 flex justify-center items-center bg-white rounded-full shadow-md p-2
+      transform transition duration-300 hover:scale-105 min-w-full w-80 '>
+      <div className='w-6 h-6 bg-black rounded-full mr-2'></div>
       <Link 
         href={link}
-        target="_blank">
+        target="_blank"
+        class='text-sm'>
         {linkname}
       </Link>
     </div>

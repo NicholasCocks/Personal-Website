@@ -2,9 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Home() {
-
-  // this will be the recreation of nicholascocks.github.io
-
   return (
     <main>
       <header class="container mx-auto px-4">
