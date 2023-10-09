@@ -13,8 +13,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <NavBar />
-        {children}
+        <div className='lg:flex lg:justify-between lg:gap-4'>
+          <header className='container lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:px-24 max-h-screen'>
+            <h1 id="logo" >Nicholas Cocks</h1>
+            <ul className='pages_nav'>
+              <NavBar />
+            </ul>
+            <ul className="sections_nav">
+              <li><a href="https://www.linkedin.com/in/nicholas-cocks/" target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/NicholasCocks" target="_blank">Github</a></li>
+              <li><a href="mailto:nick@caveat.nyc" target="_blank">Email</a></li>
+            </ul>
+          </header>
+          
+          {children}
+        </div>
       </body>
     </html>
   )

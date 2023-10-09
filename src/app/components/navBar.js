@@ -8,7 +8,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav class="flex justify-center items-center text-lg w-screen bg-gray-50 h-16 opacity-90 fixed ">
+      <nav class="flex justify-center items-center text-lg">
         {routeDescriptions.map((routeObject, index) => {
           return (
             <Link 
@@ -22,7 +22,6 @@ const NavBar = () => {
           )
         })}
       </nav>
-      <div className='h-16 mb-4'></div>
     </>
   )
 }
