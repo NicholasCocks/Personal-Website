@@ -7,21 +7,29 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav class="container flex justify-center text-lg mx-auto my-4 px-4">
-      <Link 
-        href="/"
-        to="/"
-        className={pathname == "/" ? "active_nav" : ""}>
-        Home
-      </Link>
-      <Link 
-        href="/art"
-        to="/art"
-        className={pathname == "/art" ? "active_nav" : ""}
-        Art> Art
-      </Link>
-    </nav>
+    <>
+      <nav class="flex justify-center items-center text-lg w-screen bg-gray-50 h-16 opacity-90 fixed ">
+        {routeDescriptions.map((routeObject, index) => {
+          return (
+            <Link 
+              href={routeObject["route"]}
+              to="/"
+              key={index}
+              className={`p-2 mx-2 rounded-lg hover:text-blue-500 hover:bg-slate-200
+                ${pathname == routeObject["route"] ? "active_nav" : ""}`}>
+              {routeObject["name"]}
+            </Link>
+          )
+        })}
+      </nav>
+      <div className='h-16 mb-4'></div>
+    </>
   )
 }
+
+const routeDescriptions = [
+  { name: "Home", route: "/"},
+  { name: "Art", route: "/art"}
+]
 
 export default NavBar

@@ -3,7 +3,7 @@ import LinkTreeLink from '../components/linkTreeLink'
 
 const artPage = () => {
   return (
-    <main class="container flex flex-col content-center items-center">
+    <main class="container flex flex-col content-center items-center px-4">
       <h1>Art Page</h1>
       <div className='flex flex-col content-center items-center'>
         <h3 className='text-lg'>New EP!</h3>
@@ -36,7 +36,6 @@ const artPage = () => {
           link="https://soundcloud.com/ncxdd"
           preview_photo=""/>
       </div>
-      
     </main>
   )
 }
