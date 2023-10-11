@@ -8,7 +8,7 @@ export default function Home() {
   return (  
     <div class="container mx-auto">
       <section id="one" >
-        <h3 className='text-lg'>About Myself</h3>
+        <h3 className='text-lg mb-6'>About Myself</h3>
         <p>My name is Nicholas Cocks and Im a Full-Stack Engineer.</p>
         <p>My resume can be found <Link target="_blank" href="/images/Nicholas Cocks Full-Stack Developer Resume 2023.pdf">here!</Link></p>
         <p>I am a software Engineer with years of experience building out robust, beautiful, reliable and test-covered web pages and applications. 
@@ -22,7 +22,7 @@ export default function Home() {
       <section id="two">
         <h3 className='text-lg'>Things I Can Do</h3>
           
-        <ul class="feature-icons grid grid-cols-2 gap-4">
+        <ul class="feature-icons grid grid-cols-2 gap-4 my-4">
           {skillsRaw.map((skillObject, index) => {
             return (
               <SkillIcon 

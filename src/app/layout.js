@@ -2,6 +2,13 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import NavBar from './components/navBar'
 
+// The following import prevents a Font Awesome icon server-side rendering bug,
+// where the icons flash from a very large icon down to a properly sized one:
+import '@fortawesome/fontawesome-svg-core/styles.css';
+// Prevent fontawesome from adding its CSS since we did it manually above:
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false; /* eslint-disable import/first */
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -18,7 +25,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className}`}>
         <div className='lg:flex lg:justify-between lg:gap-4'>
           <header className='container lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 
-            lg:flex-col lg:justify-between lg:px-24 max-h-screen'>
+            lg:flex-col lg:justify-between lg:px-24 lg:py-24 max-h-screen'>
             <NavBar />
           </header>
           

@@ -30,3 +30,7 @@ body {
 .active_nav { 
   @apply bg-slate-100;
 }
+
+section {
+  @apply mb-6;
+}
