@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import SkillIcon from './components/skillIcon'
+import { faGoogle, faReact, faJs, faVuejs, faPython, faNodeJs, faAws, faFigma,  } from "@fortawesome/free-brands-svg-icons";
+import { faGem, faDatabase, } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
   return (  
@@ -23,9 +25,9 @@ export default function Home() {
         <ul class="feature-icons grid grid-cols-2 gap-4">
           {skillsRaw.map((skillObject, index) => {
             return (
-                <SkillIcon 
-                  key={index} 
-                  skillObject={skillObject} />
+              <SkillIcon 
+                key={index} 
+                skillObject={skillObject} />
             )
             })}
         </ul>
@@ -56,16 +58,19 @@ export default function Home() {
 }
 
 const skillsRaw = [
-  {text: "Javascript", src: "logo-javascript.svg", alt: "Javascript Logo Icon"},
-  {text: "Python", src: "python-logo-only.svg", alt: "Python Logo Icon"},
-  {text: "React", src: "react.svg", alt: "React Logo Icon"},
-  {text: "Vue", src: "Vue.js_Logo_2.svg.png", alt: ""},
-  {text: "Ruby On Rails", src: "rails-1.svg", alt: "Ruby on Rails Logo Icocn"},
-  {text: "Node", src: "nodejs-icon.svg", alt: "Node JS Icon"},
-  {text: "Google Cloud Platform", src: "Google-cloud-02.png", alt: "Google Cloud Platform Logo Icon"},
-  {text: "Figma", src: "128px-Figma-logo.svg.png", alt: "Figma Logo Icon"},
+  {text: "Javascript", src: faJs, alt: "Javascript Logo Icon"}, // yes
+  {text: "Python", src: faPython, alt: "Python Logo Icon"}, // yes
+  {text: "React", src: faReact, alt: "React Logo Icon"}, // yes
+  {text: "Vue", src: faVuejs, alt: ""}, // yes
+  {text: "Ruby On Rails", src: faGem, alt: "Ruby on Rails Logo Icocn"},
+  {text: "Node", src: faNodeJs, alt: "Node JS Icon"}, // yes
+  {text: "Figma", src: faFigma, alt: "Figma Logo Icon"}, // yes
+  {text: "Amazon Web Services (AWS)", src: faAws, alt: "Amazon Web Services Logo Icon"}, // yes
+  {text: "Google Cloud Platform", src: faGoogle, alt: "Google Cloud Platform Logo Icon"}, // google
+  {text: "SQL", src: faDatabase, alt: "database Icon"}, // database 
+]
+
+const rejects = [
   {text: "Next.js", src: "nextjs-icon-svgrepo-com.svg", alt: "Next JS Logo Icon"},
   {text: "Webpack", src: "webpack-icon.svg", alt: "Webpack Icon"},
-  {text: "Amazon Web Services (AWS)", src: "aws-2.svg", alt: "Amazon Web Services Logo Icon"},
-  {text: "Postgresql", src: "postgresql.svg", alt: "Postgresql Logo Icon"},
 ]
