@@ -6,8 +6,8 @@ import { faGem, faDatabase, } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
   return (  
-    <div class="container mx-auto">
-      <section id="one" >
+    <>
+      <section id="one">
         <h3 className='text-lg mb-6'>About Myself</h3>
         <p>My name is Nicholas Cocks and Im a Full-Stack Engineer.</p>
         <p>My resume can be found <Link target="_blank" href="/images/Nicholas Cocks Full-Stack Developer Resume 2023.pdf">here!</Link></p>
@@ -34,26 +34,26 @@ export default function Home() {
       </section>
       <section id="three">
         <h3 className='text-lg'>Projects</h3>
-          <div class=" flex flex-direction-col mx-10">
+          <div>
             <a 
               href="https://nicholascocks.github.io/Synthesthesia/" 
               target="_blank" 
-              class="image">
+              class="image pr-8">
               Synthesthesia
             </a>
-            <div className='flex items-center justify-center'>
+            <div className='md:flex gap-4'>
               <Image 
-              src="/images/synthesthesia.gif" 
-              width={200}
-              height={100}
-              alt=""
-              className='mr-8' />
+                src="/images/synthesthesia.gif" 
+                width={300}
+                height={100}
+                alt=""
+                className='' />   
               <p>A fun and meditative drawing app; this project required using quadratic equations to refine brush strokes, complex debouncing implementations to create a smooth musical tones, and some pretty complex Fast Fourier Transform (FFT) implementation to create the frequency displays. 
               Theres also an autumn themed brush!</p>
             </div>
           </div>
       </section>
-    </div>
+    </>
   )
 }
 

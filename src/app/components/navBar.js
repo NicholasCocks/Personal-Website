@@ -28,7 +28,7 @@ const NavBar = () => {
           })}
         </nav>
         </ul>
-        <ul className="sections_nav flex items-center">
+        <ul className="sections_nav flex items-center mt-2">
           <li className='mr-4'>
             <a href="https://www.linkedin.com/in/nicholas-cocks/" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} className="text-center" />
