@@ -4,9 +4,9 @@ import LinkTreeLink from '../components/linkTreeLink'
 const artPage = () => {
   return (
     <main class="container flex flex-col content-center items-center px-4">
-      <h1>Art Page</h1>
+      <h2 className='text-5xl mb-8'>Art Page</h2>
       <div className='flex flex-col content-center items-center'>
-        <h3 className='text-lg'>New EP!</h3>
+        <h3 className='my-4'>New EP!</h3>
         <LinkTreeLink 
           linkname="'Please Keep Going' Video EP"
           link="https://www.youtube.com/watch?v=cKQfo_LKG4Q&list=PL1shYKdQavBT2fjRizqk9fKfnnvtkqTSu"
@@ -16,13 +16,13 @@ const artPage = () => {
           link="https://open.spotify.com/album/0d64K1LbnkEteaFUDUl6BS"
           preview_photo=""/>
 
-        <h3 className='text-lg'>Photography</h3>
+        <h3 className='my-4'>Photography</h3>
         <LinkTreeLink 
           linkname="Photography Portfolio"
           link="https://www.instagram.com/nikola.djukic.photos/"
           preview_photo=""/>
 
-        <h3 className='text-lg'>Music Ive Produced</h3>
+        <h3 className='my-4'>Music Ive Produced</h3>
         <LinkTreeLink
           linkname="Bendita Bonita EP"
           link="https://open.spotify.com/album/7iIBpYWbJURlWJLHHf6lgU"

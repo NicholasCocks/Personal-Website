@@ -28,9 +28,13 @@ body {
 }
 
 .active_nav { 
-  @apply bg-slate-100;
+  @apply  shadow-md;
 }
 
 section {
   @apply mb-6;
+}
+
+h3 {
+  @apply text-3xl
 }
