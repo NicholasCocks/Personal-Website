@@ -9,14 +9,14 @@ export default function Home() {
     <>
       <section id="one">
         <h3 className='mb-6'>About Myself</h3>
-        <p>My name is Nicholas Cocks and Im a Full-Stack Engineer.</p>
-        <p>My resume can be found <Link target="_blank" href="/images/Nicholas Cocks Full-Stack Developer Resume 2023.pdf">here!</Link></p>
-        <p>I am a software Engineer with years of experience building out robust, beautiful, reliable and test-covered web pages and applications. 
+        <p className='mb-2'>My name is Nicholas Cocks and Im a Full-Stack Engineer.</p>
+        <p className='mb-2'>You can find my resume <Link target="_blank" href="/images/Nicholas Cocks Full-Stack Developer Resume 2023.pdf">here!</Link></p>
+        <p className='mb-2'>I am a software Engineer with years of experience building out robust, beautiful, reliable and test-covered web pages and applications. 
         As detailed in my resume and below, I have proficiency in a diverse array of technologies. 
         Additionally, my adaptability from years of various engineering work, 
         combined with the eagerness to learn and collaborate, 
         I believe would make me a strong and affable contributer to any company.</p>
-        <p>Iam a solar engineer, turned audio engineer turned software engineer. I just love building things!</p>
+        <p className='mb-4'>I am a solar engineer, turned audio engineer turned software engineer.<br/> I just love building things!</p>
         <p>Lets connect!</p>
       </section>
       <section id="two">
@@ -33,7 +33,7 @@ export default function Home() {
         </ul>
       </section>
       <section id="three">
-        <h3>Projects</h3>
+        <h3 className='mb-4'>Projects</h3>
           <div>
             <a 
               href="https://nicholascocks.github.io/Synthesthesia/" 

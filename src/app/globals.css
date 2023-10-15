@@ -28,7 +28,7 @@ body {
 }
 
 .active_nav { 
-  @apply  shadow-md;
+  @apply bg-zinc-300 bg-gradient-to-tl;
 }
 
 section {
@@ -37,4 +37,8 @@ section {
 
 h3 {
   @apply text-3xl
+}
+
+a {
+  @apply underline hover:text-slate-600
 }
