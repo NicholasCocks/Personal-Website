@@ -8,7 +8,7 @@ export default function Home() {
   return (  
     <>
       <section id="one">
-        <h3 className='mb-6'>About Myself</h3>
+        <h3>About Myself</h3>
         <p className='mb-2'>My name is Nicholas Cocks and Im a Full-Stack Engineer.</p>
         <p className='mb-2'>You can find my resume <Link target="_blank" href="/images/Nicholas Cocks Full-Stack Developer Resume 2023.pdf">here!</Link></p>
         <p className='mb-2'>I am a software Engineer with years of experience building out robust, beautiful, reliable and test-covered web pages and applications. 
@@ -33,7 +33,7 @@ export default function Home() {
         </ul>
       </section>
       <section id="three">
-        <h3 className='mb-4'>Projects</h3>
+        <h3>Projects</h3>
           <div>
             <a 
               href="https://nicholascocks.github.io/Synthesthesia/" 

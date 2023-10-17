@@ -20,7 +20,7 @@ const NavBar = () => {
                 href={routeObject["route"]}
                 to="/"
                 key={index}
-                className={`p-2 my-2 w-full hover:bg-stone-200 from-inherit from-slate-100 hover:shadow-md bg-gradient-to-br
+                className={`p-2 my-2 w-full hover:bg-stone-200 from-inherit from-slate-100 hover:shadow-md no-underline bg-gradient-to-br
                   ${pathname == routeObject["route"] ? "active_nav" : ""}`}>
                 {routeObject["name"]}
               </Link>
