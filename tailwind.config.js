@@ -7,6 +7,15 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
+  plugins: [],
+  // To enable dark mode for all classes:
+  variants: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd'],
+  
+  // To enable dark mode for only single utility class:
+  variants: {
+    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd']
+  },
   theme: {
     extend: {
       backgroundImage: {
@@ -18,7 +27,5 @@ module.exports = {
     container: {
       center: true,
     }
-  },
-  
-  plugins: [],
+  }
 }

@@ -14,7 +14,7 @@ const LinkTreeLink = ({linkname, link, preview_photo}) => {
       <Link 
         href={link}
         target="_blank"
-        class='text-sm no-underline'>
+        className='text-sm no-underline'>
         {linkname}
       </Link>
       

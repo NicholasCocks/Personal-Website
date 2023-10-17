@@ -3,7 +3,7 @@ import LinkTreeLink from '../components/linkTreeLink'
 
 const artPage = () => {
   return (
-    <main class="container flex flex-col content-center items-center px-4">
+    <main className="container flex flex-col content-center items-center px-4">
       <h2 className='text-5xl mb-8'>Art Page</h2>
       <div className='flex flex-col content-center items-center'>
         <h3 className='my-4'>New EP!</h3>

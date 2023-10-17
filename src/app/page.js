@@ -22,7 +22,7 @@ export default function Home() {
       <section id="two">
         <h3>Things I Can Do</h3>
           
-        <ul class="feature-icons grid grid-cols-2 gap-4 my-4">
+        <ul className="feature-icons grid grid-cols-2 gap-4 my-4">
           {skillsRaw.map((skillObject, index) => {
             return (
               <SkillIcon 
@@ -38,7 +38,7 @@ export default function Home() {
             <a 
               href="https://nicholascocks.github.io/Synthesthesia/" 
               target="_blank" 
-              class="image pr-8">
+              className="image pr-8">
               Synthesthesia
             </a>
             <div className='md:flex gap-4'>

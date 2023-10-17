@@ -1,6 +1,7 @@
 "use client"
 
 import Link from 'next/link'
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -9,11 +10,46 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 const NavBar = () => {
   const pathname = usePathname();
 
+  const [theme, setTheme] = useState("")
+
+  useEffect(() => {
+    let sectionNamesArray = getSectionHeaderHtmlNode();
+    console.log(sectionNamesArray)
+
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) 
+      && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+      setTheme('dark')     
+    } else {
+      setTheme('light') 
+      document.documentElement.classList.remove('dark')
+    }
+  }, [])
+
+  const toggleTheme = () => {
+    if (theme === 'dark') {
+      setTheme('light') 
+    } else {
+      setTheme('dark')
+    }   
+  }
+
+  useEffect(() => {
+    if (theme == 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    localStorage.theme = theme
+  },[theme])
+
   return (
     <>
       <h1 className='text-4xl font-bold tracking-tight text-slate-600 sm:text-5xl'>Nicholas Cocks</h1>
+        <button onClick={e => toggleTheme()}> toggle mode </button>
         <ul className='pages_nav'>
-          <nav class="flex items-center lg:items-start lg:flex-col text-lg">
+          <nav className="flex items-center lg:items-start lg:flex-col text-lg">
           {routeDescriptions.map((routeObject, index) => {
             return (
               <Link 
@@ -47,6 +83,12 @@ const NavBar = () => {
         </ul>
     </>
   )
+}
+
+const getSectionHeaderHtmlNode = () => {
+  Array.from(document.getElementsByTagName('H3')).map(element => {
+    return element.innerText
+  });
 }
 
 const routeDescriptions = [
