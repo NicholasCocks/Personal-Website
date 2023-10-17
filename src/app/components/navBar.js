@@ -13,8 +13,6 @@ const NavBar = () => {
   const [theme, setTheme] = useState("")
 
   useEffect(() => {
-    let sectionNamesArray = getSectionHeaderHtmlNode();
-    console.log(sectionNamesArray)
 
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) 
@@ -43,6 +41,8 @@ const NavBar = () => {
     }
     localStorage.theme = theme
   },[theme])
+  
+  const sectionNamesArray = getSectionHeaderHtmlNode();
 
   return (
     <>
@@ -50,19 +50,28 @@ const NavBar = () => {
         <button onClick={e => toggleTheme()}> toggle mode </button>
         <ul className='pages_nav'>
           <nav className="flex items-center lg:items-start lg:flex-col text-lg">
-          {routeDescriptions.map((routeObject, index) => {
+            {routeDescriptions.map((routeObject, index) => {
+              return (
+                <Link 
+                  href={routeObject["route"]}
+                  to="/"
+                  key={index}
+                  className={`p-2 my-2 w-full hover:bg-stone-200 from-inherit from-slate-100 hover:shadow-md no-underline bg-gradient-to-br
+                    ${pathname == routeObject["route"] ? "active_nav" : ""}`}>
+                  {routeObject["name"]}
+                </Link>
+              )
+            })}
+          </nav>
+        </ul>
+        <ul>
+          {sectionNamesArray.map((name, index) => {
             return (
-              <Link 
-                href={routeObject["route"]}
-                to="/"
-                key={index}
-                className={`p-2 my-2 w-full hover:bg-stone-200 from-inherit from-slate-100 hover:shadow-md no-underline bg-gradient-to-br
-                  ${pathname == routeObject["route"] ? "active_nav" : ""}`}>
-                {routeObject["name"]}
-              </Link>
+              <li key={index}>
+                {name}
+              </li>
             )
           })}
-        </nav>
         </ul>
         <ul className="sections_nav flex items-center mt-2">
           <li className='mr-4'>
@@ -86,7 +95,7 @@ const NavBar = () => {
 }
 
 const getSectionHeaderHtmlNode = () => {
-  Array.from(document.getElementsByTagName('H3')).map(element => {
+  return Array.from(document.getElementsByTagName('H3')).map(element => {
     return element.innerText
   });
 }
