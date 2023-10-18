@@ -22,7 +22,7 @@ export default function Home() {
       <section id="two">
         <h3>Things I Can Do</h3>
           
-        <ul className="feature-icons grid grid-cols-2 gap-4 my-4">
+        <ul className="feature-icons grid grid-cols-2 gap-8 my-4">
           {skillsRaw.map((skillObject, index) => {
             return (
               <SkillIcon 

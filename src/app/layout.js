@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"></link>
       </head>
       <body className={`${inter.className}`}>
-        <div className='lg:flex lg:justify-between lg:gap-4 dark:bg-black'>
+        <div className='lg:flex lg:justify-between lg:gap-4 dark:bg-slate-900 dark:text-slate-200'>
           <header className='container lg:sticky lg:top-0 lg:flex lg:w-1/2 
             lg:flex-col lg:justify-between p-6 md:px-12 md:py-20 lg:px-24 lg:py-24 lg:max-h-screen lg:min-h-screen'>
             <NavBar />

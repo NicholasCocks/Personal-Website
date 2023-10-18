@@ -7,7 +7,7 @@ const SkillIcon = ({ skillObject }) => {
   return (
     <li
       className="htmlicon flex items-center">
-      <FontAwesomeIcon icon={skillObject["src"]} className='mr-4 w-8 h-8'/>
+      <FontAwesomeIcon icon={skillObject["src"]} className='mr-4 fa-2xl'/>
       <p className="htmlptag">{skillObject["text"]}</p>
     </li>
   )
