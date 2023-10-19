@@ -7,18 +7,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import ThemeButton from './themeButton';
-import { ReactDOM } from 'react';
+import { ReactDOM, useEffect, useState } from 'react';
 
 const NavBar = () => {
   const pathname = usePathname();
-  
+  let [sectionTitles, setSectionTitles] = useState([]);
+
   const getSectionHeaderHtmlNode = () => {
     return Array.from(document.getElementsByTagName('H3')).map(element => {
       return element.innerText
     });
   }
 
-  const sectionNamesArray = getSectionHeaderHtmlNode();
+  useEffect(() => {
+    setSectionTitles(getSectionHeaderHtmlNode());
+  }, [pathname])
 
   return (
     <>
@@ -46,7 +49,7 @@ const NavBar = () => {
       </ul>
 
       <ul id="sections_nav">
-        {sectionNamesArray.map((name, index) => {
+        {sectionTitles.map((name, index) => {
           return (
             <li key={index}>
               {name}
