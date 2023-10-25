@@ -38,7 +38,8 @@ const NavBar = () => {
       </div>
 
       <section 
-        className={`MOBILE-MENU absolute right-0 bg-slate-200 min-h-screen py-6 ${isNavOpen ? "hidden" : ""}`}>
+        id="MOBILE-MENU"
+        className={`absolute right-0 bg-slate-200 min-h-screen py-6 lg:hidden ${isNavOpen ? "hidden" : ""}`}>
         <ul id='pages_nav'>
           <nav className="flex flex-col items-center text-lg">
             {routeDescriptions.map((routeObject, index) => {
@@ -77,7 +78,9 @@ const NavBar = () => {
         <ThemeButton />
       </section>
 
-      <section className='DESKTOP-MENU hidden lg:block'>
+      <section
+        id='DESKTOP-MENU'
+        className='hidden lg:block'>
         <ThemeButton />
 
         <ul id='pages_nav'>

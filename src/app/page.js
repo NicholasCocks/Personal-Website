@@ -19,6 +19,9 @@ export default function Home() {
         <p className='mb-4'>I am a solar engineer, turned audio engineer turned software engineer.<br/> I just love building things!</p>
         <p>Lets connect!</p>
       </section>
+      <section>
+        <h3>Experience</h3>
+      </section>
       <section id="two">
         <h3>Things I Can Do</h3>
           
