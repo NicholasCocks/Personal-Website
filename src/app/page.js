@@ -5,6 +5,7 @@ import { faGoogle, faReact, faJs, faVuejs, faPython, faNodeJs, faAws, faFigma,  
 import { faGem, faDatabase, } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
+  // TODO: cover photo
   return (  
     <>
       <section id="one">

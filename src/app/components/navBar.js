@@ -26,7 +26,6 @@ const NavBar = () => {
 
   return (
     <>
-
       <div className='flex-col'>
         <div className='flex items-center justify-between'>
           <h1 className='text-4xl font-bold tracking-tight text-slate-600 dark:text-slate-300 sm:text-5xl'>

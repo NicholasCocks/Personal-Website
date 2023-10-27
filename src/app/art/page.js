@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faSpotify, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const artPage = () => {
+  // TODO: cover photo
   return (
     <main className="container flex flex-col content-center items-center px-4">
       <h2 className='text-5xl mb-8'>Art Page</h2>
