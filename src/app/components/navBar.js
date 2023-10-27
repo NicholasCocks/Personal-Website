@@ -26,16 +26,37 @@ const NavBar = () => {
 
   return (
     <>
-      <div className='flex items-center justify-between'>
-        <h1 className='text-4xl font-bold tracking-tight text-slate-600 dark:text-slate-300 sm:text-5xl'>
-          Nicholas Cocks
-        </h1>
 
-        <FontAwesomeIcon 
-          icon={faBars}
-          onClick={() => setNavOpen(!isNavOpen)}
-          className='text-center fa-xl lg:hidden' />
-      </div>
+      <div className='flex-col'>
+        <div className='flex items-center justify-between'>
+          <h1 className='text-4xl font-bold tracking-tight text-slate-600 dark:text-slate-300 sm:text-5xl'>
+            Nicholas Cocks
+          </h1>
+
+          <FontAwesomeIcon 
+            icon={faBars}
+            onClick={() => setNavOpen(!isNavOpen)}
+            className='text-center fa-xl md:hidden' />
+        </div>
+        <ul 
+          id='pages_nav'
+          className='mt-8'>
+            <nav className="flex items-center lg:items-start lg:flex-col text-lg">
+              {routeDescriptions.map((routeObject, index) => {
+                return (
+                  <Link 
+                    href={routeObject["route"]}
+                    to="/"
+                    key={index}
+                    className={`p-2 my-2 w-full hover:bg-stone-200 from-inherit from-slate-100 dark:from-slate-800 hover:shadow-md no-underline bg-gradient-to-br
+                      ${pathname == routeObject["route"] ? "active_nav" : ""}`}>
+                    {routeObject["name"]}
+                  </Link>
+                )
+              })}
+            </nav>
+          </ul>
+        </div>
 
       <section 
         id="MOBILE-MENU"
@@ -81,24 +102,7 @@ const NavBar = () => {
       <section
         id='DESKTOP-MENU'
         className='hidden lg:block'>
-        <ThemeButton />
-
-        <ul id='pages_nav'>
-          <nav className="flex items-center lg:items-start lg:flex-col text-lg">
-            {routeDescriptions.map((routeObject, index) => {
-              return (
-                <Link 
-                  href={routeObject["route"]}
-                  to="/"
-                  key={index}
-                  className={`p-2 my-2 w-full hover:bg-stone-200 from-inherit from-slate-100 dark:from-slate-800 hover:shadow-md no-underline bg-gradient-to-br
-                    ${pathname == routeObject["route"] ? "active_nav" : ""}`}>
-                  {routeObject["name"]}
-                </Link>
-              )
-            })}
-          </nav>
-        </ul>
+           
 
         <ul id="sections_nav">
           {sectionTitles.map((name, index) => {
@@ -110,23 +114,27 @@ const NavBar = () => {
           })}
         </ul>
         
-        <ul id='socials_nav' className='flex items-center mt-2'>
-          <li className='mr-4'>
-            <a href="https://www.linkedin.com/in/nicholas-cocks/" target="_blank">
-              <FontAwesomeIcon icon={faLinkedin} className="text-center fa-lg" />
-            </a>
-          </li>
-          <li className='mr-4'>
-            <a href="https://github.com/NicholasCocks" target="_blank">
-              <FontAwesomeIcon icon={faGithub} className="text-center fa-lg" />
-            </a>
-          </li>
-          <li className='mr-4'>
-            <a href="mailto:nick@caveat.nyc" target="_blank">
-            <FontAwesomeIcon icon={faEnvelope} className="text-center fa-lg" />
-            </a>
-          </li>
-        </ul>
+        <div className='flex items-center justify-between'>
+          <ul id='socials_nav' className='flex items-center mt-2'>
+            <li className='mr-4'>
+              <a href="https://www.linkedin.com/in/nicholas-cocks/" target="_blank">
+                <FontAwesomeIcon icon={faLinkedin} className="text-center fa-lg" />
+              </a>
+            </li>
+            <li className='mr-4'>
+              <a href="https://github.com/NicholasCocks" target="_blank">
+                <FontAwesomeIcon icon={faGithub} className="text-center fa-lg" />
+              </a>
+            </li>
+            <li className='mr-4'>
+              <a href="mailto:nick@caveat.nyc" target="_blank">
+              <FontAwesomeIcon icon={faEnvelope} className="text-center fa-lg" />
+              </a>
+            </li>
+          </ul>
+          <ThemeButton />
+        </div>
+
       </section>
     </>
   )
