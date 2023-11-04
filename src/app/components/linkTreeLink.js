@@ -9,7 +9,9 @@ const LinkTreeLink = ({linkname, link, preview_photo}) => {
   return (
     <div className='my-2 flex justify-between items-center bg-white dark:text-slate-800 rounded-full shadow-md p-2
       transform transition duration-300 hover:scale-105 w-80'>
-      <div className='w-6 h-6 bg-black rounded-full mr-2'></div>
+
+      <FontAwesomeIcon icon={preview_photo["icon"]} className="w-6 h-6 rounded-full mr-2" />
+      
       
       <Link 
         href={link}
