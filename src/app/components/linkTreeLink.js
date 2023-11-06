@@ -1,7 +1,6 @@
 // We'll initialize a component here.
 "use client"
 import Link from 'next/link'
-import Image from 'next/image'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons'
 
@@ -11,7 +10,6 @@ const LinkTreeLink = ({linkname, link, preview_photo}) => {
       transform transition duration-300 hover:scale-105 w-80'>
 
       <FontAwesomeIcon icon={preview_photo["icon"]} className="w-6 h-6 rounded-full mr-2" />
-      
       
       <Link 
         href={link}

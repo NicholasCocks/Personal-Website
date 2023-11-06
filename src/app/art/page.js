@@ -2,17 +2,26 @@ import React from 'react'
 import LinkTreeLink from '../components/linkTreeLink'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faSpotify, faYoutube, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
+import Image from 'next/image'
 
 const artPage = () => {
   // TODO: cover photo
   return (
     <main className="container flex flex-col content-center items-center px-4">
-      <h2 className='text-5xl mb-8'>Art Page</h2>
+      <h2 className='text-5xl mb-8 static'>Art Page</h2>
+      <div className='relative'>
+        <Image 
+          fill 
+          src="/images/banner3.jpeg" 
+          alt=""
+          style={{objectFit: "contain"}}
+          sizes="(max-width: 100%) 100%, 100%" />
+      </div>
       <section>
         <p>Booking: nickcocksofficial@gmail.com</p>
       </section>
       <section className='flex flex-col content-center items-center'>
-        <div className='flex items-center justify-between w-9/12 my-4'>
+        <div className='flex items-center justify-center w-9/12 my-4'>
           <h3 className=''>New EP!</h3>
         </div>
         
@@ -28,7 +37,7 @@ const artPage = () => {
           link="https://open.spotify.com/album/0d64K1LbnkEteaFUDUl6BS"
           preview_photo={{"icon": faSpotify}}/>
 
-        <div className='flex items-center justify-between w-9/12 my-4'>
+        <div className='flex items-center justify-center w-9/12 my-4'>
           <h3 className=''>Photography</h3>
 
           <a href='#' target="_blank">
@@ -41,7 +50,7 @@ const artPage = () => {
         <LinkTreeLink 
           linkname="Photography Portfolio"
           link="https://www.instagram.com/nikola.djukic.photos/"
-          preview_photo={{"icon":   faInstagram}}/>
+          preview_photo={{"icon": faInstagram}}/>
 
         <h3 className='my-4'>Music Ive Produced</h3>
         <LinkTreeLink

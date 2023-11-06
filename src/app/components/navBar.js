@@ -8,6 +8,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons'
 import ThemeButton from './themeButton';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -36,6 +37,13 @@ const NavBar = () => {
             icon={faBars}
             onClick={() => setNavOpen(!isNavOpen)}
             className='text-center fa-xl md:hidden' />
+
+          <Image
+            alt=""
+            src="/images/avatar.jpg" 
+            width={60}
+            height={60}
+            className='rounded-full'/>
         </div>
         <ul 
           id='pages_nav'
